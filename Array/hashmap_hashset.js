@@ -15,3 +15,19 @@ function groupComplement(arr){
     
     return result_arr;
 }
+
+function groupAnagram(arr){
+ 
+    let mapping=new Map()
+    
+    for(let i=0;i<arr.length;i++){
+      let key=arr[i].split('').sort().join('')
+      if(mapping.has(key)){
+          mapping.get(key).push(arr[i])
+      }else{
+            mapping.set(key,[arr[i]])
+      }
+    }
+    return [...mapping.values()]
+    }
+     

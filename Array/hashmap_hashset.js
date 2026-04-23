@@ -31,3 +31,20 @@ function groupAnagram(arr){
     return [...mapping.values()]
     }
      
+    function validParenthesis(s){
+        let stack=[]
+        let mapping=new Map()
+        mapping.set('}','{')
+        mapping.set(']','[')
+        mapping.set(')','(')
+        for(let i=0;i<s.length;i++){
+        if(stack.at(-1)==mapping.get(s[i]) && stack.length!=0){
+               stack.pop()
+            }
+            else{
+                stack.push(s[i])
+            }
+        }
+        return stack.length===0
+        
+    }

@@ -38,7 +38,7 @@ function groupAnagram(arr){
         mapping.set(']','[')
         mapping.set(')','(')
         for(let i=0;i<s.length;i++){
-        if(stack.at(-1)==mapping.get(s[i]) && stack.length!=0){
+        if(stack.length!=0 && stack.at(-1)==mapping.get(s[i])){
                stack.pop()
             }
             else{
@@ -47,4 +47,25 @@ function groupAnagram(arr){
         }
         return stack.length===0
         
+    }
+
+    function nextGreaterElement(arr) {
+        const stack = [];
+        const result = [];
+    
+        for (let i = arr.length - 1; i >= 0; i--) {
+            while (stack.length !== 0 && stack.at(-1) <= arr[i]) {
+                stack.pop();
+            }
+    
+            if (stack.length === 0) {
+                result[i] = -1;
+            } else {
+                result[i] = stack.at(-1);
+            }
+    
+            stack.push(arr[i]);
+        }
+    
+        return result;
     }

@@ -18,4 +18,39 @@ while(current!=null){
 }
 
 
-// while(curre)
+class Node{
+    constructor(val){
+        this.val=val
+        this.next=null
+    }
+}
+
+class LinkedList{
+    constructor(){
+        this.head=null
+        this.size=0
+    }
+
+    addfirst(data){
+        const new_node = new Node(data)
+        new_node.next=this.head
+        this.head=new_node
+        this.size++
+    }
+    
+    addlast(data){
+        const new_node=new Node(data)
+        
+        if(!this.head){
+            this.head=new_node
+            return
+        }
+        let current=this.head
+        
+        while(current.next){
+            current=current.next
+        }
+        current.next=new_node
+        
+    }
+}

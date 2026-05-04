@@ -122,3 +122,5 @@ function groupAnagram(arr){
         }
         return -1
     }
+
+    console.log('commit')

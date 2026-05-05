@@ -137,3 +137,12 @@ function groupAnagram(arr){
         }
         return result
     };
+
+    var maxDepth = function(root) {
+        if(root===null) return 0;
+    
+        const left_subtree = maxDepth(root.left)
+      const right_subtree =  maxDepth(root.right)
+    
+        return 1+Math.max(left_subtree,right_subtree)
+    };

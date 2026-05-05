@@ -146,3 +146,33 @@ function groupAnagram(arr){
     
         return 1+Math.max(left_subtree,right_subtree)
     };
+
+
+    var levelOrder = function(root) {
+        if(root===null) return [];
+    
+        const result_queue = [root]
+         const result = []
+    
+         while(result_queue.length > 0){
+            let queue_size=result_queue.length
+            let curr_value=[]
+            
+             
+    
+            for(let i=0;i<queue_size;i++){
+                let node=result_queue.shift()
+                
+                curr_value.push(node.val)
+                if(node.left) result_queue.push(node.left)
+            if(node.right) result_queue.push(node.right)
+            }
+    
+            
+             
+             result.push(curr_value)
+    
+         }
+    
+         return result
+    };

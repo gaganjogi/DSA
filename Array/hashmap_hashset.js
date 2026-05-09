@@ -176,3 +176,29 @@ function groupAnagram(arr){
     
          return result
     };
+
+    var invertTree = function(root) {
+    
+        if(root===null) return root;
+        let result_queue=[root]
+        while(result_queue.length>0){
+            let result_length=result_queue.length
+            for(let i=0;i<result_length;i++){
+                let node = result_queue.shift()
+    
+                const temp1=node.left
+                node.left=node.right
+                node.right=temp1
+     if(node.left)
+     { 
+     result_queue.push(node.left)
+     }
+    if(node.right)
+     {
+     result_queue.push(node.right)  
+     }
+            }
+        
+        }
+    return root
+    };

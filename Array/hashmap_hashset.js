@@ -202,3 +202,17 @@ function groupAnagram(arr){
         }
     return root
     };
+    var diameterOfBinaryTree = function(root) {
+        let max_diameter=0
+        
+            function nodeLengthCheck(node){
+                if(node ===null) return 0;
+                const left_maxsublength=nodeLengthCheck(node.left)
+                const right_maxsublength= nodeLengthCheck(node.right)
+                max_diameter=Math.max(max_diameter,left_maxsublength+right_maxsublength)
+        
+                return 1+(Math.max(left_maxsublength,right_maxsublength))
+            }
+            nodeLengthCheck(root)
+           return max_diameter;
+        };

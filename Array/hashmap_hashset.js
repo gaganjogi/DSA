@@ -216,3 +216,27 @@ function groupAnagram(arr){
             nodeLengthCheck(root)
            return max_diameter;
         };
+
+
+        var isBalanced = function(root) {
+            if(!root) return true
+        
+            function lengthCheck(node){
+        
+        
+            if (node ===null) return 0;
+        
+            const left_length=lengthCheck(node.left)
+            const right_length=lengthCheck(node.right)
+             
+          if (left_length === false || right_length === false) return false;
+            if(Math.abs(left_length-right_length)>=2){
+                return false
+            }
+        
+            return 1+Math.max(left_length,right_length);
+            }
+           return lengthCheck(root)==false?  false :  true  
+        
+        
+        };

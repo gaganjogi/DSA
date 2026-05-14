@@ -240,3 +240,20 @@ function groupAnagram(arr){
         
         
         };
+
+        var lengthOfLongestSubstring = function(s) {
+
+            let container= new Set()
+            let left=0
+            let longest_max_length=0
+            for(let right=0;right<s.length;right++){
+                  while(container.has(s[right])){
+                       container.delete(s[left])
+                       left=left+1
+                  }
+                  container.add(s[right])
+                  longest_max_length=Math.max(longest_max_length,right-left+1)
+                
+            }
+            return longest_max_length
+        };

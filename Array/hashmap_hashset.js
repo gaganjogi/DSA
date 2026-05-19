@@ -271,3 +271,24 @@ function groupAnagram(arr){
         
             return false
         };
+
+        var findLengthOfShortestSubarray = function(arr) {
+            let left = 0;
+           let right = arr.length - 1;
+       
+           while (left < arr.length - 1 && arr[left] <= arr[left + 1]) left++;
+       
+           if (left === arr.length - 1) return 0;
+       
+           while (right > 0 && arr[right - 1] <= arr[right]) right--;
+       
+           let res = Math.min(arr.length - left - 1, right);
+       
+           let j = right;
+           for (let i = 0; i <= left; i++) {
+               while (j < arr.length && arr[j] < arr[i]) j++;
+               res = Math.min(res, j - i - 1);
+           }
+       
+           return res;
+       };

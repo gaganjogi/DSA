@@ -292,3 +292,25 @@ function groupAnagram(arr){
        
            return res;
        };
+
+       var rotateRight = function(head, k) {
+        let tail=head
+        let linked_list_length=1
+        while(head!=null && tail.next!=null ){
+           tail=tail.next;
+           linked_list_length+=1
+        }
+        if(linked_list_length<2) return head
+        k=k%linked_list_length
+        tail.next=head
+    
+     let newTail=head
+        for(let i=0;i<linked_list_length-k-1;i++){
+             newTail=newTail.next
+        }
+    
+        let newHead=newTail.next
+        newTail.next=null
+       
+       return newHead
+    };

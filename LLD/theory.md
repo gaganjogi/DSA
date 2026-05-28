@@ -49,3 +49,10 @@ Class Owner{
         car.stop()
     }
 }
+
+Abstraction mainly used to hide the implementation details and provide a simplified view of the system.
+
+Hides the implementation details and provides a simplified view of the system.
+ Mainly data hiding
+
+ ENCAPSULATION mainly used for data security it is like a capsule

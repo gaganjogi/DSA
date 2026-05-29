@@ -51,7 +51,7 @@ Class Owner{
 }
 
 Abstraction mainly used to hide the implementation details and provide a simplified view of the system.
-
+and one more thing mainly it is like a interface 
 Hides the implementation details and provides a simplified view of the system.
  Mainly data hiding
 

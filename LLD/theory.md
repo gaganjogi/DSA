@@ -55,4 +55,5 @@ and one more thing mainly it is like a interface
 Hides the implementation details and provides a simplified view of the system.
  Mainly data hiding
 
- ENCAPSULATION mainly used for data security it is like a capsule
+ ENCAPSULATION mainly used for data security 
+ it is like a capsule

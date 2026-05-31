@@ -57,3 +57,4 @@ Hides the implementation details and provides a simplified view of the system.
 
  ENCAPSULATION mainly used for data security 
  it is like a capsule
+ 

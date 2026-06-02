@@ -57,4 +57,12 @@ Hides the implementation details and provides a simplified view of the system.
 
  ENCAPSULATION mainly used for data security 
  it is like a capsule
+
+ in encapsulation we mainly hide the variables that cannot be accessed directly from outside the class making them as private
+
+ and we mainly access them by getters and setters with some validation
+
+ this is main thing what encapsulation provides for example we can user should can not directly access the private variable this is mainly data security
+
+ 
  

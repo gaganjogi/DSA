@@ -65,4 +65,7 @@ Hides the implementation details and provides a simplified view of the system.
  this is main thing what encapsulation provides for example we can user should can not directly access the private variable this is mainly data security
 
  
+ inheritance
+
+ parent child relationship
  

@@ -68,4 +68,27 @@ Hides the implementation details and provides a simplified view of the system.
  inheritance
 
  parent child relationship
- 
+  we use access modifier to access the any characteristics 
+  private we cannot access
+  protected we can access in child class but not in parent class
+  public we can access in child class and parent class
+
+
+  if i inherit the class pubicly it will be in child class but not to next class of the child mostly this cases only
+
+
+  interface banktransfer{
+    deposit(amount : num)
+    withdraw(amount : num)  
+    getbalance() : num
+  }
+
+we mainly use interface (coming to inheritance)
+  class savingsaccount{
+    constructor(private balance : banktransfer){}
+
+    applyinterest(){
+        this.balance.deposit(this.balance.getbalance() *0.1)
+    }
+  }
+  

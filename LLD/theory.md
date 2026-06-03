@@ -92,3 +92,7 @@ we mainly use interface (coming to inheritance)
     }
   }
   
+  "favor implements + dependency injection over extends".
+
+  class EmailChannel implements NotificationChannel { ... }
+You're doing realization + polymorphism — the GOOD path. Not classical inheritance. You're not inheriting any code; you're just promising to provide a send() method. Anyone using NotificationChannel as a type can swap in any implementation polymorphically.

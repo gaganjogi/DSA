@@ -96,3 +96,13 @@ we mainly use interface (coming to inheritance)
 
   class EmailChannel implements NotificationChannel { ... }
 You're doing realization + polymorphism — the GOOD path. Not classical inheritance. You're not inheriting any code; you're just promising to provide a send() method. Anyone using NotificationChannel as a type can swap in any implementation polymorphically.
+
+Polymorphism
+dynamic polymorphism and static polymorphism
+
+function overloading(static polymorphism) and function overriding
+(dynamic polymorphism)
+
+like having two same function in parent class and child class but there result will be different (so dynamic polymorphism) method signature should be same everything same
+
+but in static based on the requirement we try to add one or more parameter in the same function so based on the requirement we can add or remove parameter

@@ -107,7 +107,7 @@ like having two same function in parent class and child class but there result w
 
 but in static based on the requirement we try to add one or more parameter in the same function so based on the requirement we can add or remove parameter
 
-UML diagram
+UML diagram Unified Modeling Language
 
 Types of UML 
 
@@ -115,11 +115,11 @@ structural (1 .class diagram) and behavioral (sequence diagram)
 
 in a card having class name members and methods having all the access modifiers (private (-) protected (#) public (+))
 
-2. associations/connections
+2. associations/connections total 14 are there currently 2 is enough
 
-class association and object  association
+class association and object  association 
 
-in class association - (inheritance association) (is-a) relationship
+in class association - (inheritance association) (is-a) relationship manual car is a car
 
 object association - (simple aggregation ,composition) (has-a) relationship all comprises composition but for theory we have differentiated
 
@@ -129,3 +129,10 @@ inheritance - i -> is nothing but a is-a relationship
 Composition - has-a relationship
 
 simple relationship:- weakest relationship - arjun lives in house weakest relationship
+
+aggreation - this is not fully strong relationship for example a room compriese of a house having chair lamp and bed
+represented by diamond  has-a relationship
+
+composition - this is strong relationship for example chair comprises of arms seat legs and wheels
+represented by filled diamond having has-a relationship
+

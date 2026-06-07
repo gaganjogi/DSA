@@ -136,3 +136,23 @@ represented by diamond  has-a relationship
 composition - this is strong relationship for example chair comprises of arms seat legs and wheels
 represented by filled diamond having has-a relationship
 
+composition representation
+
+class A{
+  method_1  (){
+  
+  }
+}
+
+class B{
+  B(){
+    B= new A()
+  }
+  method_2 (){
+  
+  }
+}
+
+let b = new B()
+b.method_2()
+b.a.method_1()

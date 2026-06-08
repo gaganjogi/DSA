@@ -156,3 +156,14 @@ class B{
 let b = new B()
 b.method_2()
 b.a.method_1()
+
+
+implement shapeType{
+  area(type:string):Promise<number>
+}
+
+class Triangle implements shapeType{
+  area(shape){
+    return Math.PI * shape.radius ** 2;
+  }
+}

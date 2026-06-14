@@ -168,3 +168,4 @@ class Triangle implements shapeType{
   }
 }
 
+sometimes in lld we cannot decide to use aggregation or composition 

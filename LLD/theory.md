@@ -168,4 +168,12 @@ class Triangle implements shapeType{
   }
 }
 
-sometimes in lld we cannot decide to use aggregation or composition 
+sometimes in lld we cannot decide to use aggregation or composition it depends on situation if two entities are tightly coupled (composition) or loosely coupled (aggregation)
+in sequence diagram we represent objects like object inside box
+lifeline between application and then activation bar send information to other object
+
+messages async and sync
+
+then create and destroy message in create we create new object and create lifeline but in destroy we will delete the object and delete the lifeline
+
+next lost and found message sent message got to inactivation line of the object so lost and found message found as it is in activation line

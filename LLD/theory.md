@@ -184,3 +184,8 @@ solid principles
 
 single responsibilty principle
 only one class one reason to change
+
+ij future if any things wants to change we need to completely make new class or make interfaces
+
+open for extension closed for modification
+we need to follow abstraction polymorphism and inheritance we need to completely use this instead of changing or modification

@@ -1,4 +1,5 @@
-Mainly in LLD we consider maintainability scalibilty and reliability
+
+soMainly in LLD we consider maintainability scalibilty and reliability
 LLD - code structure 
 HLD - system structure 
 History of OOPS:-
@@ -178,3 +179,14 @@ then create and destroy message in create we create new object and create lifeli
 
 next lost and found message sent message got to inactivation line of the object so lost and found message found as it is in activation line
 
+
+solid principles
+
+
+single responsibilty principle
+only one class one reason to change
+
+ij future if any things wants to change we need to completely make new class or make interfaces
+
+open for extension closed for modification
+we need to follow abstraction polymorphism and inheritance we need to completely use this instead of changing or modification

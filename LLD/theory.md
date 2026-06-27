@@ -261,3 +261,6 @@ Three things, in order:
 Split by who owns the change — validation, persistence, notification, logging each have a different owner. That's your cut line.
 Constructor = inject everything — orchestrator creates nothing itself, receives all dependencies. That's how you know the class is truly an orchestrator and not hiding responsibilities inside.
 Method = read the sequence like a story — each line does one thing, order is intentional, no logic leaks in (no if, no SQL, no templates). If you can explain why each line is in that exact position, you've demonstrated deep understanding.
+
+
+OPEN FOR EXTENSION BUT CLOSED FOR MODIFICATION:- 

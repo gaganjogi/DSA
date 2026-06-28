@@ -18,3 +18,8 @@ we can also create our security group for our instance and then attach it to our
 we can set up ssh access from anywhere to our instance (from key pair what we have downloaded why creating a instance)
 
 delete instance when not in use
+
+aws instance type
+
+for small website or blog
+small t3 micro or t3 small

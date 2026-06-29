@@ -47,3 +47,30 @@ so first attach volume and then mount and
 
 mount is like a temporary access if u detach from the instance it will goes away so after mount u need to copy to persistent data
  cp -r /mnt/backup/home/ec2-user/data-folder /home/ec2-user/
+
+FOUR STEPS FOR EBS
+ so first after attach volume to instance 
+ first access for the external device 
+ then attach point
+ then mount 
+then copy
+
+
+SNAPSHOT copy to other region
+
+first volume then if snapshot is already created then just copy snapshot and set to required region
+
+
+EBS encryption
+data inside the volume is encrypted
+data while transferring from volume to instance is encrypted
+volume to snapshot is encrypted
+snapshot to volume is encrypted
+
+
+EBS lifecycle manager
+
+for creating snapshot like daily weekly monthly yearly
+automating snapshot creation
+
+recycle bin as if we delete by miss

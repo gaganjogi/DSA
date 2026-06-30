@@ -20,3 +20,10 @@ and then create load balancer
 and then we see this like url http://practise-load-balancer-1543871316.ap-south-1.elb.amazonaws.com
 
 and if anything not worked check in resoure map of load balaancer and check the target group
+if the target is not registered manually then we need to register the target group with the instance
+
+then we can see distrubuting of the requests between instances distrubutes the traffic scalable resources
+we can create in other regions also and test and make HA and all
+ALB , NLB , GWLB
+
+BE carful while writing security group check inbound and outbound rules

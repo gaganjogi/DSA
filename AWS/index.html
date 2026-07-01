@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Static Site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">MyBrand</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Build Something First<span>Amazing</span></h1>
+    <p>A simple static website served from EC2 via Apache.</p>
+    <a href="#" class="btn">Get Started</a>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Fast</h3>
+      <p>Served directly from Apache on EC2 with zero middleware.</p>
+    </div>
+    <div class="card">
+      <h3>Scalable</h3>
+      <p>Behind an ALB with Auto Scaling — handles any traffic spike.</p>
+    </div>
+    <div class="card">
+      <h3>Reliable</h3>
+      <p>Multi-AZ deployment keeps the site up even if one AZ fails.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Served by EC2 · Apache · AWS</p>
+  </footer>
+</body>
+</html>

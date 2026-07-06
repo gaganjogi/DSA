@@ -5,8 +5,9 @@ const obj1={
 
 const obj2={
     name:"gagana",
-    age:21
+    age:21,
+    age:22
 }
 
-const result_obj={...obj1}
+const result_obj={...obj1,...obj2}
 console.log(result_obj);

@@ -30,3 +30,6 @@ hard - choice diagram
 
 
 in one function we can do things depends upon how actually we write induction logic and hypothesis
+
+for input and output method 
+if it print all subsets subsequences power set

@@ -264,3 +264,6 @@ Method = read the sequence like a story — each line does one thing, order is i
 
 
 OPEN FOR EXTENSION BUT CLOSED FOR MODIFICATION:- 
+
+
+"Both interface and type can define a contract for a class, but interface is preferred because it supports declaration merging, reads more naturally with extends for hierarchies, and is the idiomatic OOP-style contract in TS. type is more general-purpose — used for unions, tuples, and complex type compositions that interface can't express."

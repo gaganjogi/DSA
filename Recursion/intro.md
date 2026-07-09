@@ -34,3 +34,5 @@ we get answer when we get the input as empty then least node is answer
 
 design recursive tree
 fuck the problem (write the code)
+
+if you want to compare values inside set convert them to string and compare using json.stringify and easily convert into again array using array.from(result_arr,(item)=>json.parse(item))

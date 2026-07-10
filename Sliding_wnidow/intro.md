@@ -48,3 +48,6 @@ maxSubarraySum(arr, k) {
     add the arr[j] to sum
 
     Yes, that formula is correct — n - k + 1 gives you the number of possible windows of size k in an array of length n, assuming k ≤ n.
+
+
+mainly things in sliding window first slightly extend the window size using j and then do calculation part and then resize the window size using i

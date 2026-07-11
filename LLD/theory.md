@@ -52,11 +52,11 @@ Class Owner{
 }
 
 Abstraction mainly used to hide the implementation details and provide a simplified view of the system.
-and one more thing mainly it is like a interface 
+and one more thing mainly it is like a interface  (interface)
 Hides the implementation details and provides a simplified view of the system.
  Mainly data hiding
 
- ENCAPSULATION mainly used for data security 
+ ENCAPSULATION mainly used for data security  (access modifiers)
  it is like a capsule
 
  in encapsulation we mainly hide the variables that cannot be accessed directly from outside the class making them as private
@@ -66,17 +66,21 @@ Hides the implementation details and provides a simplified view of the system.
  this is main thing what encapsulation provides for example we can user should can not directly access the private variable this is mainly data security
 
  
+ we mainly use getters and setters to update anything of private access modifiers this is mainly data security
+
+ 
  inheritance
 
  parent child relationship
   we use access modifier to access the any characteristics 
   private we cannot access
-  protected we can access in child class but not in parent class
+  protected we can access in child class but not in parent class (protected mainly for inheritence)
   public we can access in child class and parent class
 
 
+when we are using extends inheritance we need to call the parent class constructor before the child so we use the super() function
   if i inherit the class pubicly it will be in child class but not to next class of the child mostly this cases only
-
+his is the beginning of the Repository pattern, extremely common in LLD interviews (Design a Library System, Design a Parking Lot, etc. all use this idea — a manager class holding a collection + lookup methods).
 
   interface banktransfer{
     deposit(amount : num)
@@ -108,6 +112,12 @@ like having two same function in parent class and child class but there result w
 
 but in static based on the requirement we try to add one or more parameter in the same function so based on the requirement we can add or remove parameter
 
+as if we declare something in an class that will be used by other class then that class becomes abstract class (dynamic polymorphism)
+
+there will be different in the output of two classes but they will be required so we will define that\
+
+Static polymorphism
+but in static based on the requirement we try to add one or more parameter in the same function so based on the requirement we can add or remove parameter
 UML diagram Unified Modeling Language
 
 Types of UML 

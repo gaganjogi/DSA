@@ -119,7 +119,7 @@ there will be different in the output of two classes but they will be required s
 Static polymorphism
 but in static based on the requirement we try to add one or more parameter in the same function so based on the requirement we can add or remove parameter
 UML diagram Unified Modeling Language
-
+same function we can make adding some paramaters- overloading
 Types of UML 
 
 structural (1 .class diagram) and behavioral (sequence diagram)
@@ -138,7 +138,7 @@ inheritance - i -> is nothing but a is-a relationship
 
 
 Composition - has-a relationship
-
+The one question that separates all three: "What happens to the part when the whole is destroyed?" ask this question for 3 object type relationship
 simple relationship:- weakest relationship - arjun lives in house weakest relationship
 
 aggreation - this is not fully strong relationship for example a room compriese of a house having chair lamp and bed
@@ -148,7 +148,17 @@ composition - this is strong relationship for example chair comprises of arms se
 represented by filled diamond having has-a relationship
 
 composition representation
+Association — "knows about"
+Two objects that use each other but live totally independent lives. Neither owns the other.
 
+Aggregation — "has-a, but they can live apart"
+A whole-part relationship, but the part survives without the whole. The whole contains the part, but doesn't own its life.
+
+
+Composition — "has-a, and they die together"
+A whole-part relationship where the part cannot exist without the whole. The whole owns the part's entire life — usually creates it internally.
+
+Aggregation and composition are both "has-a" — the ONLY difference is whether the part dies with the whole.
 class A{
   method_1  (){
   
@@ -192,7 +202,7 @@ next lost and found message sent message got to inactivation line of the object 
 
 solid principles
 
-
+if the classes are tightly coupled then it is difficult o maintain the code and to introduce new classess and not to introduce new bugs right so we need to follow some principles
 single responsibilty principle
 only one class one reason to change
 

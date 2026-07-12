@@ -203,6 +203,23 @@ next lost and found message sent message got to inactivation line of the object 
 solid principles
 
 if the classes are tightly coupled then it is difficult o maintain the code and to introduce new classess and not to introduce new bugs right so we need to follow some principles
+
+SRP is really about people, not code. The full definition Robert Martin gave later is sharper than "one reason to change":
+
+A class should have one, and only one, actor it answers to.
+
+An actor = a person or role who requests changes. Run this on any class — ask "who would come to my desk asking to change this?
+
+class User {
+  hashPassword()      // ← Security team asks to change this
+  sendWelcomeEmail()  // ← Marketing asks to change this
+  saveToDatabase()    // ← Platform/DBA team asks to change this
+  validateEmail()     // ← Legal/Compliance asks to change this
+}
+
+
+This is the most practical one for backend: business logic, persistence, and communication should almost never live in the same class
+
 single responsibilty principle
 only one class one reason to change
 
@@ -287,3 +304,8 @@ OPEN FOR EXTENSION BUT CLOSED FOR MODIFICATION:-
 
 
 "Both interface and type can define a contract for a class, but interface is preferred because it supports declaration merging, reads more naturally with extends for hierarchies, and is the idiomatic OOP-style contract in TS. type is more general-purpose — used for unions, tuples, and complex type compositions that interface can't express."
+
+
+now cart will be referenced to db persistance that is saving in db we have currently then by that we can try to save using mongoDB or dynamo db or may be anything
+
+we cannot make object of a abstract class(having function declaration)

@@ -51,3 +51,22 @@ maxSubarraySum(arr, k) {
 
 
 mainly things in sliding window first slightly extend the window size using j and then do calculation part and then resize the window size using i
+
+i variable size sliding window we will get given k value as sum or some other thing ok
+
+
+<!-- while(j<n){
+    if(condition<k){
+        increment
+    }
+    if(condition===k){
+    cal
+    increment
+    }
+    if(cond>k){
+        while(cond>k){
+            remove
+            i++(increment)
+        }
+    }
+} -->

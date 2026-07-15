@@ -87,7 +87,7 @@ class DocumentEditor{
    }
 
    render(){
-return this.sheet.render()   
+return this.sheet.render()
 }
 
    save_storage(){

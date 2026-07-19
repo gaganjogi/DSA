@@ -70,3 +70,13 @@ i variable size sliding window we will get given k value as sum or some other th
         }
     }
 } -->
+
+
+in variable size sliding window it is difficult to maintain the size of the window so we need to find condition for expanding and shrinking the window(>k) also we need to write as this is not like fixed k
+as we are not able to maintain the size of the window there will be case where condition will be greater than k right
+so untill condition should be less than k so we try to remove elements from start using i pointer
+and increment i pointer untill condition becomes less than k
+
+That's four pops to fix a single violation caused by adding one new element. An if would only do one pop and then move on with an invalid window still in place. A while keeps popping until the invariant (countd <= k) is actually restored. 
+
+this is the reason of the while loop in condition > k

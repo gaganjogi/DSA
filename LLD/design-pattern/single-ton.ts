@@ -70,3 +70,5 @@ console.log(singleton3==singleton4)
 // 18. Analytics
 // 19. Reporting
 // 20. Dashboard
+
+//manager class will be most singleton class

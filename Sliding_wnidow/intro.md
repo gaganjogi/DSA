@@ -80,3 +80,5 @@ and increment i pointer untill condition becomes less than k
 That's four pops to fix a single violation caused by adding one new element. An if would only do one pop and then move on with an invalid window still in place. A while keeps popping until the invariant (countd <= k) is actually restored. 
 
 this is the reason of the while loop in condition > k
+
+in variale size try to find the condition first and try to represent in mathematical form

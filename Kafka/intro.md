@@ -45,3 +45,25 @@ In our application we can have 4 partitions 1 consumer group
 
 Now if we want as Pub/Sub we can have 4 partitions n number of consumer groups
 
+
+Code part 
+Using docker image i tried to run zookeeper service port 2181 (this is the main service which manages the kafka brokers)
+
+docker run -p 9092:9092 \
+-e KAFKA_ZOOKEEPER_CONNECT=192.0.0.2:2181 \ - zookeeper port
+-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://192.0.0.2:9092 \ kafka port
+-e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \ number of replication 
+
+INFRA Setup
+Admin - partition,topics
+produces - messages producer
+consumers - messages consumer
+
+setup kafka client
+admin client
+producer client
+consumer client
+
+so to check this we tried to partition split the messages into different partitions
+for 2 partitions and 1 consumer group both were going to same consumer
+for 2 partitions and 2 consumer groups both were going to different consumers

@@ -22,3 +22,5 @@ Degenerate Binary Tree - Each parent node has only one child node
 for iterative 
 balanced binary tree- height (left) subtree - height (right) subtree <= 1
 use of flag to change the direction like zig zag traversal
+
+for boundary traversal first left boundary without leaf node + leaf nodes+ right boundary without leaf node (reverse order)

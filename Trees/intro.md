@@ -17,3 +17,8 @@ Complete Binary Tree - All levels are completely filled except possibly the last
 Perfect Binary Tree - All internal nodes have two children and all leaf nodes are at the same level
 Balanced Binary Tree - The height of the tree is O(log n) where n is the number of nodes (Binary Search Tree)
 Degenerate Binary Tree - Each parent node has only one child node
+
+
+for iterative 
+balanced binary tree- height (left) subtree - height (right) subtree <= 1
+use of flag to change the direction like zig zag traversal

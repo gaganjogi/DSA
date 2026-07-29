@@ -16,3 +16,6 @@ first_index=mid
 high=mid-1 for first occurrence
 last_index=mid
 low=mid+1 for last occurrence
+
+
+let diff=xor & (-xor) (two's complement to find out rightmost bit)

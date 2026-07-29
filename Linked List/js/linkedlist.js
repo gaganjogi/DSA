@@ -100,6 +100,61 @@ deleteKthElement(k)
 }
 
 
+insertHead(val)
+{
+    let node=new Node(val)
+    if(this.head==null) return
+
+    node.next=this.head
+    this.head=node
+return
+    
+}
+
+insertTail(val)
+{
+let node=new Node(val)
+    if(this.head==null)
+    {
+return
+    }
+    this.tail.next=node
+    this.tail=node
+    return
+}
+
+insertKthElement(val,k)
+{
+    if(this.head==null)
+    {
+        if(k==1)
+        {
+            return new Node(val)
+        }
+        else
+        {
+            return null
+        }
+    }
+
+    if(k==1)
+    {
+        return this.insertHead(val)
+    }
+    let trav=this.head
+
+   let node= new Node(val)
+    for(let i=1;i<k-1;i++)
+    {
+        trav=trav.next
+    }
+
+    node.next=trav.next
+    trav.next=node
+
+return
+
+}
 
 
 }

@@ -19,3 +19,16 @@ low=mid+1 for last occurrence
 
 
 let diff=xor & (-xor) (two's complement to find out rightmost bit)
+
+try to find the minimum in rotated sorted array
+
+if(arr[mid]>arr[high])
+{
+    low=mid+1
+}
+else
+{
+    high=mid
+}
+
+and one more thing when we think that array is getting out of bound use %n(lenght of the array)

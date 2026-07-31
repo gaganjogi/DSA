@@ -28,3 +28,16 @@ for(let i=1;i<arr.length-1;i++)
 console.log('no match')
 
 first find total sum and compare with the prefix sum till 0 to i
+
+two pointers only between two points in an array
+sliding window when we required in a block
+
+kadane algorithm only to get the maximum sub array sum
+
+in maximum subarray count having count k first use prefix sum
+and then check if the difference of prefix sum - k is present in map 
+then get the value of that key and add that to the count
+and then set to the map
+
+if not set the key with prefix_sum and increment count of that
+

@@ -28,3 +28,18 @@ kthSmallest(arr, k) {
     only sort nlogk not n log n
 
 
+
+heap is nothing but should be complete binary tree(all levels filled and next level left to right)
+
+heap dsa need to satisfy two conditions
+1. structural property - complete binary tree (almost)
+2. heap property - parent should be greater than children (max heap) or parent should be smaller than children (min heap)
+
+binary tree to array
+when deleting the value
+we first swap the last element with the root and then heapify the array
+
+
+to get the parent index in the heap we use (i-1)/2
+to get the left child index in the heap we use 2*i+1
+to get the right child index in the heap we use 2*i+2

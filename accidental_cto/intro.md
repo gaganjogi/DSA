@@ -52,3 +52,36 @@ addr;
 proxy_pass directive told Nginx to start directing traﬃc. After
 
 by this the application server was working good(kitchen) but at the same time they need more data right(pantry) database server was using more resources CPU was choking
+
+Database Replication (as read operation were chocking the most crucial write operation)
+
+ one we implemented, is
+called Master-Slave Replic
+
+The Master is the exclusive, VIP section of the club. It’s the
+single source of truth.
+
+The Read Replica (Slave): 
+
+how 
+How Streaming Replication Works in PostgreSQL
+PostgreSQL has a brilliant, built-in feature for this called
+streaming replication.
+
+The WAL (Write-Ahead Log): The Master database, - whatever changes happens we write in this log book
+
+The Stream: whatever changes happens in the log book will the streamed to slave db with private connection
+
+The Application: The Read Replica receives this stream of changes
+
+major changes in code 
+1 .earlier one db 
+now one for master - write operations
+slave - for read operation
+
+
+2 . Database Router:
+decides which database it
+should be sent to
+
+We had successfully scaled our database.

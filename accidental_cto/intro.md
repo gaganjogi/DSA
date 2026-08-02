@@ -30,3 +30,25 @@ workload.
 
  in, the load balancer sends
 it to the server with the fewest active connections.
+
+nginx as load balancer instead of AWS elastic load balancer
+
+in nginx configuration we specify the algorithm and servers in our fleet
+
+# "app_
+servers" group we defined above.
+proxy_pass http://app_
+servers;
+proxy_
+set
+_
+header Host $host;
+proxy_
+set
+header X-Real-IP $remote
+_
+_
+addr;
+proxy_pass directive told Nginx to start directing traﬃc. After
+
+by this the application server was working good(kitchen) but at the same time they need more data right(pantry) database server was using more resources CPU was choking

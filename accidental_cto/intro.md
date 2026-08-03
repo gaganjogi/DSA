@@ -85,3 +85,37 @@ decides which database it
 should be sent to
 
 We had successfully scaled our database.
+
+CAP theorem: only when distributed systems come into picture
+Consistency, Availability, Partition Tolerance
+
+availability over
+strict consistency
+
+strong consistency - all nodes see the same data at the same time
+eventual consistency - nodes may see different data at different times
+causal consistency - nodes see data in the order it was created
+
+
+ full second or two. This
+delay is called replication lag
+
+The live stream of data from the Master to the Replica is
+incredibly fast, but it is not instantaneous. 
+
+We couldn't get rid of replication lag—it's a physical
+limitation. But we had to find a way to shield our sellers from
+its eﬀects.
+
+You must consciously identify which
+parts of your application require strong consistency and
+which can tolerate eventual consistency.
+
+The logic is simple: for a specific user, immediately
+after they perform a write operation, we should temporarily
+break our own rules and send their read queries to the
+Master database as well.
+
+"This user is in a VIP window for
+the next 60 seconds.
+"

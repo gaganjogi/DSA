@@ -6,7 +6,7 @@ after that we swap with the i th element from 0 to n-1
 
 
 JS Code:-
-
+inner loop finding minimum element   outer loop swaping the element
 selectionSort(arr) {
         // your code here
         for(let i=0;i<arr.length;i++){

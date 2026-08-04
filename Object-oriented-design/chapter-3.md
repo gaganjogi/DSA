@@ -99,3 +99,39 @@ Exception
 
 System is
 Happy
+
+The content of scope
+
+A Shared Method
+A constructor is a good example of a method that is shared by all instances of a class.
+There are three types of attributes:
+- Local attributes
+- Object attributes
+- Class attributes
+
+Local attributes
+Local variables are not shared by methods. (confined to that methods definition)
+
+Object attributes
+There are many design situations in which an attribute must be shared by several methods
+within the same object
+
+The selection of the word this as a keyword is perhaps unfortunate. However, we
+must live with it.The use of the this keyword directs the compiler to access the object
+variable count and not the local variables within the method bodies.
+
+
+it's not illegal, but it's a readability/bug-risk issue — keep local variable names distinct from class field names so it's always immediately obvious, just by reading, whether you're touching the object's real state or just a throwaway value
+
+Class attributes
+use static keyword before defining the variable (By declaring count as static, this attribute is allocated a single piece of memory for all objects instantiated from the class.)
+
+problem:-
+
+let object_one=new Count()
+let object_two=new Count()
+For the sake of argument, let’s say that the object object_one is going merrily about its
+way and is using count as a means to keep track of the pixels on a computer screen.This
+is not a problem until the object object_two decides to use attribute count to keep track of
+sheep.The instant that object_two records its first sheep, the data that object_one was saving is
+lost.

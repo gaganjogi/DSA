@@ -135,3 +135,25 @@ way and is using count as a means to keep track of the pixels on a computer scre
 is not a problem until the object object_two decides to use attribute count to keep track of
 sheep.The instant that object_two records its first sheep, the data that object_one was saving is
 lost.
+
+operator overloading and multiple inheritance simply created overhoad not supported in JS/TS
+
+The bottom line is that Java and .NET inter-
+faces provide interfaces, but no implementation, whereas abstract classes may provide both
+interfaces and implementation.
+
+Shallow copy (copies only address) spread operator shallow copy
+
+use structuredClone(for deep copy)
+ let bag1 = { items: ["pen", "book"] };
+let bag2=structuredClone(bag1)
+
+Object equality check
+let object_one={items:['bag','pen']}
+let object_two={items:['bag','pen']}
+
+function isContentEqual(obj1,obj2){
+    return obj1.items.length===obj2.items.length && 
+    obj1.items.every((val,i)=>val===obj2.items[i])
+}
+console.log(isContentEqual(object_one,object_two))

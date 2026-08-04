@@ -119,3 +119,20 @@ Master database as well.
 "This user is in a VIP window for
 the next 60 seconds.
 "
+
+
+now we were pushing everything to production we did not have test instance
+
+The Environments
+
+The Development Environment (The Test Kitchen)
+This is the developer's laptop.
+
+
+The Production Environment (The Dining Room)
+This is the live server that real users interact with.
+
+ The Staging Environment (The Dress Rehearsal)
+ This was the critical piece we were missing. A Staging
+environment is a complete, parallel universe that is an exact
+mirror of your Production environment

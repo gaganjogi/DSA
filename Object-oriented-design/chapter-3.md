@@ -58,3 +58,44 @@ Initializing to some safe state not always zero
 
 During the design, it is good practice to identify a stable state for all attributes and
 then initialize them to this stable state in the constructor.
+
+Error handling
+
+Ignore the problem
+The primary directive for all applications is that the application
+should never crash.If you do not handle your errors, the application will eventually termi-
+nate ungracefully or continue in a mode that can be considered an unstable state
+
+Checking for the problem and aborting application
+the application can display a message indicating that there is a problem. In this
+case the application gracefully exits, and the user is left staring at the computer screen
+
+Checking the problem and attempting it to recover
+In this case, the problem is detected by the code, and the application attempts to fix itself.This works well in
+certain situations. 
+
+
+A Mix of Error Handling Techniques
+Despite the fact that this type of error handling is not necessarily object-oriented in nature, I
+believe that it has a valid place in OO design. Throwing an exception can be expensive in terms of overhead. Thus, although exceptions are a great design choice, you will still want to consider other error handling techniques, depending on your design and performance needs.
+
+Throwing an exception
+Exceptions provide a way to detect
+problems and then handle them.
+
+try {
+    // code that might throw an exception
+}
+catch (Exception e) {
+    // code to handle the exception
+}
+
+System Throws
+Exception
+
+Application Catches
+and Handles
+Exception
+
+System is
+Happy

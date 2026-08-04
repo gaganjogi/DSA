@@ -20,3 +20,6 @@ selectionSort(arr) {
             [arr[i],arr[min]]=[arr[min],arr[i]]
         }
     }
+
+
+    Selection sort pushed min to front in first iteration we will get the smallest element of the array

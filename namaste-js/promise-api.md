@@ -93,3 +93,7 @@ settled means two things
 
 to get aggregated errors
  err.errors.map((item)=>console.log(item))
+
+1. Synchronous code (current call stack)
+2. Microtask queue (Promise callbacks, queueMicrotask, async/await continuations) — ALL of them, until empty
+3. Macrotask queue (setTimeout, setInterval, I/O, etc.) — one task, then back to step 2

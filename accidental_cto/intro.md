@@ -136,3 +136,39 @@ This is the live server that real users interact with.
  This was the critical piece we were missing. A Staging
 environment is a complete, parallel universe that is an exact
 mirror of your Production environment
+
+Your staging environment must be a
+MIRROR of production
+
+This is the golden rule of staging: your staging environment
+must be as identical to your production environment as
+possible.
+
+as we cannot add directly production data due to security reasons
+The solution was to build a Seeding and Sanitization
+Pipeline.
+
+Step 1: Seeding
+The script would start by taking a full backup of our live
+production database using pg_
+dump. This gave us a
+complete, structurally perfect snapshot of our data at that
+moment.
+
+Step 2: Sanitization
+This was the critical step. Before loading this backup into the
+staging database, the script would run it through a
+"sanitizer" that would cleanse it of all sensitive information:
+
+The Assembly Line (Deployment Pipeline.)
+
+The goal of a good process is to make
+deployments BORING
+
+raise pr
+take pr review
+automated deployment to staging
+
+then github actions will run the tests suite and check any other existing functionality is broken or not (regression)
+and then the code is merged to staging branch and the QA will test this 
+and then after successful testing it will be pushed to production

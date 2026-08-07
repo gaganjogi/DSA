@@ -172,3 +172,68 @@ automated deployment to staging
 then github actions will run the tests suite and check any other existing functionality is broken or not (regression)
 and then the code is merged to staging branch and the QA will test this 
 and then after successful testing it will be pushed to production
+
+Need for Speed: Caching with Redis
+
+ Repetitive Database Queries
+
+ Django Debug Toolbar, which
+allows you to inspect everything that happens during a single
+page load
+
+ Yet, our system was dutifully
+rebuilding the entire menu from scratch, piece by piece from
+the database, for every single one of the thousands of
+customers who visited the page every hour
+
+This is the principle of caching:
+1. Identify an operation that is expensive to perform.
+2. And is frequently requested.
+3. And produces the same result every time.
+4. Perform the operation once.
+5. Store the result in a faster, temporary location (the
+cache).
+6. For all subsequent requests, serve the result from the
+cache instead of performing the expensive operation
+again.
+
+"short-term memory" 
+entire stack: Redis.
+
+Redis (which stands for REmote DIctionary Server)
+
+A traditional database like PostgreSQL is primarily
+disk-based. It stores data on a Solid-State Drive
+(SSD) or a Hard Disk Drive (HDD). 
+
+Redis is an in-memory database. It stores all of its
+data directly in your server's RAM. Think of Redis as a
+giant whiteboard right next to your desk. To get a
+piece of information, you just have to glance 
+
+The other thing that makes Redis so fast is its simplicity. It’s
+a key-value store,. There's no complex query language like SQL.
+You just say GET key. 
+
+if we update in master db 
+This is the problem of cache invalidation, famously known
+as one of the two hardest problems in computer scien
+
+The Real Solution: Event-Driven Invalidation
+
+This is event-driven cache invalidation. To do this, we
+needed two things:
+1. A way to detect the "event" that data has changed.
+2. A way to broadcast a message about that event to a
+listener.
+
+ Postgres Triggers and
+LISTEN/NOTIFY
+
+ The Database Trigger (The Security Sensor) whenver update create or delete happens in the database, it will trigger an event
+
+  NOTIFY (The Broadcast)
+
+   LISTEN (The Radio Receiver)
+    to connect to the database and LISTEN to
+the product changes channel

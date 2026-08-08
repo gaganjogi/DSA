@@ -64,4 +64,29 @@ Case study for understanding the process
 
 Because this is a small system, a requirements summary
 statement might make more sense. However, in most large systems, a database of the re-
-quirements (in bulleted list format) would be more appropriate.
+requirements (in bulleted list format) would be more appropriate.
+
+Using CRC Cards
+Discovering classes is not always straightforward. There mustbe a way to keep track of the classes as well as their interactions. One of the most popular methods for identifying and categorizing classes is to use class-responsibility-collaboration
+cards (CRC).Each CRC card represents a single class’s data attributes, responsibilities, and
+collaborations.
+
+CRC cards are, quite literally, a collection of standard index cards.
+You need to create three sections on each card:
+- The name of the class
+- The responsibilities of the class
+- The collaborations of the class
+
+Thus, using the index cards to discover classes (even a computerized
+CRC system) is a technique that everyone can understand.There are certainly various
+ways to perform these tasks, and many developers will use techniques that they are com-
+fortable with
+
+To identify collaboration
+
+To help discover collaborations, use-case scenarios can be used.A use-case is a trans-
+action or sequence of related operations that the system performs in response to a
+user request or event.
+n For each use-case, identify the objects and the messages that it exchanges.
+
+CRC cards help you discover classes, whereas use-case scenarios help you discover collaborations.

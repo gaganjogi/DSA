@@ -90,3 +90,14 @@ user request or event.
 n For each use-case, identify the objects and the messages that it exchanges.
 
 CRC cards help you discover classes, whereas use-case scenarios help you discover collaborations.
+
+Responsibility = something the class knows (data) or does on its own (an action it performs internally)
+Collaboration = another class it needs to talk to in order to fulfill that responsibility
+
+Step 1: Customer → Cart        : "add item to cart"
+Step 2: Customer → Order       : "place order"
+Step 3: Order → Payment        : "process payment"
+Step 4: Order → Restaurant     : "notify, order received"
+Step 5: Order → Delivery       : "create delivery" (order_id passed)
+Step 6: Delivery → DeliveryPerson : "assign delivery"
+Step 7: DeliveryPerson → Customer : "deliver to address"

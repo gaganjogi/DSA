@@ -32,3 +32,13 @@ else
 }
 
 and one more thing when we think that array is getting out of bound use %n(lenght of the array)
+
+
+find key in infinite sorted array
+
+so to find this the main problem was where actually the end element will come so that we can check in bound right..
+
+to fix this we can take start=0 and end=1 and then we can check if target is greater than end element then we can do 
+start=end
+end=end*2
+and when doing this if we get end element greater than target then we can apply binary search in this range

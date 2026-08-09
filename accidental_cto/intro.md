@@ -237,3 +237,25 @@ LISTEN/NOTIFY
    LISTEN (The Radio Receiver)
     to connect to the database and LISTEN to
 the product changes channel
+
+
+Why microservices from monolith?
+
+As we grow we need to scale our application and microservices help us to scale our application.
+
+and regarding system complexity one changes can hamper the whole system so we need to break it down into smaller services.
+
+They may be tightly coupled from one service to another service.
+
+How to Choose Your First Microservice
+
+Low Business Criticality - even if this services fails, it should not impact the core business functionality.
+
+Few and Clear Dependencies - this service should have minimal dependencies on other services.
+Think of the monolith as a giant, tangled ball
+of yarn. You don't want to start by trying to pull out a
+single thread from the very center
+
+A Clear and Bounded Domain  - you should be able to describe what it does in one simple
+sentence.
+

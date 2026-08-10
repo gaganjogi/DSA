@@ -259,3 +259,41 @@ single thread from the very center
 A Clear and Bounded Domain  - you should be able to describe what it does in one simple
 sentence.
 
+Theory patch 
+
+scaling profile from the rest of the
+application. The seller dashboard might get thousands of
+visits a day, but a popular store's page could get millions. By
+carving it out, we could scale it independently. We could
+have a fleet of 20 powerful servers for the Storefront service,
+while keeping a smaller, more eﬃcient fleet of 3 servers for
+the seller dashboard, saving us a huge
+
+They were two separate buildings.
+What happens when a seller logs into the core-api and
+updates a product's price? How does the completely
+separate storefront-servic
+
+Strangler Fig Pattern.(from old tree roots to new tree)
+1. Don't rewrite the monolith all at once.
+2. Instead, identify one piece of functionality (a branch of
+the old tree).
+3. Build a new, independent microservice for it (plant a
+new vine).
+4. Put a "router" or "proxy" in front of the old monolith.
+This router is the key.
+5. Initially, the router just passes all traﬃc to the old
+monolith.
+6. Then, you configure the router to intercept calls to the
+specific functionality you've rebuilt and redirect that
+traﬃc to your new microservice. You can do this
+gradually—first for internal users, then for 1% of real
+users, then 10%, and so on.
+7. Once 100% of the traﬃc for that feature is being
+served by the new service, the old code inside the
+monolith is eﬀectively dead. It's no longer being used.
+8. You can now safely delete that old code, making the
+monolith a little bit smaller.
+9. Repeat the process for the next piece of functionality
+
+The New Problem: A Pandora's Box of Communication(communication between complex services)

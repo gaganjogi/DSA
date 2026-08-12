@@ -103,3 +103,9 @@ Employee object that has no spouse.
 
 nheritance represents a new kind of al-
 ready-existing object, composition represents the interactions between various objects.
+
+IMPORTANT in one line to distinguish between association vs aggregation
+
+If the code talks to the part by itself, it's association; if the code only ever talks to the whole, it's aggregation
+
+"Car = one thing. Stereo = many things." (Aggregation hides parts, association exposes parts.)

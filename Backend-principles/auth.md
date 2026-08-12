@@ -85,3 +85,82 @@ we need to ui for open api servers (programatically)
 whatver chatgpt can do i can do that in my ui right using their api key
 
 machine to machine (user backend server to openai api server)
+
+in the above three mainly we deal with many credentials part right
+
+reusing password
+fatigue
+
+OAuth concept delegation
+
+One platform asking access or resource from other platform
+
+password sharing - bad practice
+
+instead of password sharing we use token (permission for only one resource)
+
+mainly 4 components:-
+resource owner 
+resource server 
+client 
+authorization server 
+
+OAuth 1.0
+1. Client redirects to authorization server
+2. Authorization server provides the token after giving permission by resource owner
+3. Sends the token to client 
+4. CLient used the token to access the resource (resource server)
+
+OAuth 2.0
+1.0 was complex
+crypto graphic signature was error prone
+
+so 2.0 introduces
+1. Bearer token
+2. Developer to choose mobile or web app
+3. Machine to machine communication
+4. Device code flow
+
+
+OAuth is good for authorization (what permission you can do)
+
+So openID Connect came
+Id token (JWT) info (issurer , user id , expiry time , etc)
+profile info and stores to identify using google then authorization
+
+Here the client will get the auth code and id token from authorization server
+then using this auth code we get the auth token (access token jwt) from the resource server and then send to client
+
+now using this client with every request will sends the access token (jwt) to resource server
+
+What to use when?
+
+Stateful - Saas based
+Stateless - API based(microservices)
+OAuth - third party
+API key - machine to machine
+
+AUTHORIZATION
+providing specific permission to specific user on the platform (multi tenant architecture)
+
+people came up with rbac(role based access role)
+
+dead zone only for admin
+
+approprite error message
+
+in authentication do not send normal error message like user not found password is incorrect and all this will help for hackers to try different combinations
+
+keep generic message like authentication is failed
+
+timing attacks:-
+when user submits the credentials
+
+first user not correct - less time delay
+but for password - it may take little more time
+
+attackers can find the user name is correct 
+
+so do constant time operations
+
+or same time delay 

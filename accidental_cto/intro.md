@@ -297,3 +297,16 @@ monolith a little bit smaller.
 9. Repeat the process for the next piece of functionality
 
 The New Problem: A Pandora's Box of Communication(communication between complex services)
+1. The Message Queue (e.g., RabbitMQ): The Postal
+Service - message that product price is raised and then pushed to message queue after consumer work is done the message will be pushed away 
+
+2. The Distributed Log (e.g., Apache Kafka): The
+Newspaper 
+if product price changes happens it will be published and any other service can just subscribe to that service and can just consume so 
+
+As communication between different services is required kafka was more suitable
+Dukaan's
+central nervous system on Apache Kafka
+
+main components:-
+Producer → Broker (Topic/Queue) → Consumer/Worker

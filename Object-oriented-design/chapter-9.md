@@ -45,3 +45,61 @@ an association is a form of composition.
 
 In an aggregation, you normally see only the whole, and in associations, you nor-
 mally see the parts that make up the whole
+
+Aggregation - complex object made up of many other complex and
+simple objects
+
+Association - present both the whole and the parts
+
+the computer box needs the service of a mouse, but does not have
+the capability to provide this service by itself.Thus, the computer box requests the service
+from a separate mouse via the specific port and cable connecting the mouse to the box.
+
+IMPORTANT:-
+An aggregation is a complex object composed of other objects. An association is used when
+one object wants another object to perform a service for it.
+
+Similarly, in the stereo example, the relationship between the receiver, the speakers, and
+the CD player is association; however, each of these components are complex objects that
+are made up of other objects
+
+Cardinality - number of objects that participate in an association and whether the participation is optional
+
+Which objects collaborate with which other objects?
+How many objects participate in each collaboration?
+Is the collaboration optional or mandatory?
+
+Employee class relation between these 
+
+Cardinality of Class Associations
+Division
+JobDescription
+Spouse
+Child
+
+division -  only 1 for one employee - mandatory
+jobdescription - 1 to n for one employee - mandatory
+spouse - 0 to 1 for one employee - optional
+child - 0 to n for one employee - optional
+
+Multiple Object Associations we represent using 
+
+one-to-many relationship are represented by arrays in
+the code:
+
+private Spouse spouse;
+private Child[] child;
+private Division division;
+private JobDescription[] jobDescriptions;
+
+Optional Associations
+One of the most important issues when dealing with associations is to make sure that your
+application is designed to check for optional associations.This means that your code must
+check to see whether the association is null.
+
+if no spouse exists, the code must not attempt to invoke a spouse method.
+This could lead to an application failure.Thus, the code must be able to process an
+Employee object that has no spouse.
+
+nheritance represents a new kind of al-
+ready-existing object, composition represents the interactions between various objects.

@@ -101,3 +101,5 @@ Step 4: Order → Restaurant     : "notify, order received"
 Step 5: Order → Delivery       : "create delivery" (order_id passed)
 Step 6: Delivery → DeliveryPerson : "assign delivery"
 Step 7: DeliveryPerson → Customer : "deliver to address"
+
+A responsibility can involve using another class's data — as long as the action itself (searching, deciding, looping through something) is being done by this class, on its own array. A collaboration is when this class has to send a message and rely on a different class's own logic/decision to get something done.

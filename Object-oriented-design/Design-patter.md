@@ -18,3 +18,63 @@ Controller — the glue that handles user input and connects the View to the Mod
 You can redesign the look of your UI (View) without touching the business logic (Model) or how the input is handled (Controller).
 You can change how a value is calculated (business logic) without touching the UI.
 You can swap out how/where data is stored without affecting the UI or logic.
+
+Divided the patterns into three categories:
+
+Creational patterns create objects for you, rather than having you instantiate objects
+directly.This gives your program more flexibility in deciding which objects need to
+be created for a given case.
+
+Structural patterns help you compose groups of objects into larger structures, such as
+complex user interfaces, or accounting data.
+
+Behavioral patterns help you define the communication between objects in your sys-
+tem and how the flow is controlled in a complex program.
+
+
+Creational Patterns
+The creational patterns consist of the following categories:
+- Abstract factory
+- Builder
+- Factory method
+- Prototype
+- Singleton
+
+SingleTon design pattern:-
+If you have a website
+that has a counter object to keep track of the hits on your site, you certainly do not want
+a new counter to be instantiated each time your web page is actually hit.You want a
+counter object instantiated when the first hit is made
+
+Taking Care of Business
+Remember, one of the most important OO rules is that an object should take care of itself.
+This means that issues regarding the life cycle of a class should be handled in the class,
+not delegated to language constructs like static, and so on.
+
+The main point to note about the code is the regulation of the object creation. Only a
+single counter object can be created.The code for this is as follows:
+<!-- ```java
+
+private int counter;
+private static Counter instance = null;
+
+public static Counter getInstance() {
+if(instance == null) {
+instance = new Counter ();
+System.out.println("New instance created\n");
+}
+return instance;
+}
+}
+```  -->
+
+Structural Patterns
+Structural patterns are used to create larger structures from groups of objects.The follow-
+ing seven design patterns are members of the structural category:
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Façade
+- Flyweight
+- Proxy

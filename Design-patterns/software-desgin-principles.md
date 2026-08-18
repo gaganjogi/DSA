@@ -16,3 +16,8 @@ The dependency arrow is now: low-level → abstraction ← high-level. This is t
 Define the interface in the language your business logic wants to speak — then make the low-level details conform to it, not the other way around.
 
 Low level classes are dependent on high level abstractions
+
+
+Define the abstraction/interface — described in business terms (what the high-level logic needs), not tech-implementation terms.
+Make the high-level class depend on that abstraction (not on any concrete low-level class).
+Make the low-level class implement that abstraction

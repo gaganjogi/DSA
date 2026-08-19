@@ -57,3 +57,7 @@ Factory Method lets you add new product types by adding new classes, never by ed
 Factory Method is the "hook" a library leaves open so users can swap its internal parts by subclassing — without editing the library's own code.
 
 Factory Method splits 'how do I build this object' (construction, in the factory method) from 'what do I do with this object once I have it' 
+
+main thing indentify
+
+identify product -> implement that concreate method - > in create class write abstract method for that -> implement that abstract method in concreate class

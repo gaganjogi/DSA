@@ -310,3 +310,14 @@ central nervous system on Apache Kafka
 
 main components:-
 Producer → Broker (Topic/Queue) → Consumer/Worker
+
+So apache kafka when building or adopting a complex
+technology, lean on managed services. 
+
+next we need to do code change like after any event we need to do kafka send instead going manually Debezium
+
+The moment a single
+word is added, changed, or erased in the database's
+transaction log (the WAL), Debezium sees it, captures
+the exact change, formats it into a perfect message,
+and produces it to the correct Kafka topic.

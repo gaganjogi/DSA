@@ -70,3 +70,6 @@ identify the abstract products interface-> identify the concrete products-> iden
 
 
 The factory can build a specific class internally, but it must "hand it over" to the client wearing the abstract interface's badge — so the client only ever knows "I have a Chair," never "I have a ModernChair."
+
+quiz:-
+Factory Method creates ONE product (e.g. one Transport). Abstract Factory creates a whole FAMILY of related products (e.g. Chair + Sofa + Table) that must be consistent with each other.

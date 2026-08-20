@@ -51,3 +51,19 @@ IP: 142.250.194.78  (the building)
  ├── Port 443  → Web server (HTTPS) (door #443)
  ├── Port 3306 → MySQL database     (door #3306)
  └── Port 3000 → your Node app      (door #3000)
+
+
+ to stop the container we do docker stop container_name
+
+ we can just set our name also before -p like "web-app" -p 
+
+ keep in mind while creating container we use port and image_id and when stopping we stop the container not an image
+
+ if we want to give meaningful image name use 
+ docker build -t web-app:20 (name:version)
+
+ to delete container use rm for image use rmi
+
+ what if we update the project
+ just make the change and build one more image tag with correct version 
+ and then next time we can run that image 

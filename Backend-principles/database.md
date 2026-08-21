@@ -33,3 +33,11 @@ UUID
 
 JSON - plain text
 JSONB - different format efficient advantages
+
+migrations:- changes tracking of any tables 
+
+both up and down migrations of reverting (if something goes wrong previous version)
+
+why migrations:-
+keeping track of db changes
+rollback using down

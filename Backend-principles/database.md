@@ -41,3 +41,41 @@ both up and down migrations of reverting (if something goes wrong previous versi
 why migrations:-
 keeping track of db changes
 rollback using down
+
+
+enums are predefined set of values so data integrity will be maintained (we can check this in application code) not required check all allowed type
+
+primary key not null unique
+
+constrainit (restrcit,cascade,set null,set default) referential integrity constraint as long as some associate data is there(will not delete user)
+
+we follow snakecase
+
+why not have everything in one instead of constantly modify only one table we make like this  (1:1 info) like users tables
+
+for mainly status we use enums on delete restrict if some delete users project can stay intact will check referential integrity constraint
+
+check (interval 1 to 5 ) constraint 
+
+1:1 (primary key of main table and foreign key and primary key in this table)
+
+1:many (primary key in main table but we do not make primary key only foreign key)
+
+many:many (primary key in main table but we do not make primary key ) linking table
+
+one project many users
+
+one user many projects (project_id and users_id) on delete cascade in collab table
+
+primary_key (composite primary key) (project_id,users_id) on combination we made to implicit something and no duplicate 
+
+after db design we need to test data (this is called seeding)
+
+when using use left join even if data is not there in one table
+
+convert and embed use jsonb data 
+
+what is paramterised query?
+at first it will be empty but we will provide some value later like finding out user by id (like simple string nothing else) so sql injection will not happen
+
+select * from users where id=:userId (like this parameterised value) we wrap them as string

@@ -79,3 +79,38 @@ what is paramterised query?
 at first it will be empty but we will provide some value later like finding out user by id (like simple string nothing else) so sql injection will not happen
 
 select * from users where id=:userId (like this parameterised value) we wrap them as string
+
+to retrive data we give options like page limit-page sortBy-column sortOrder- asc or desc
+
+we use ilike to  filter paramteriesed query case insensitive and same :sortOrder : sortBy 
+
+for page we can use offSet:page and limit:limit page start with 0
+
+post insert
+
+patch update table_name and set the column and consiftion and need to update time also
+
+we can do using triggers - when some condition we can perform some action
+
+what are indexes?
+
+analogy (table of contents of book will show correctly where chapter 4 starts instead of manually checking )
+
+as rdms is disk based do sequential scan
+for each id we can add a location (where exactly is hard disk) will be stored like table (id - location of particular row ) look up table directly giving 
+
+asc or desc to retrieve data in asc or desc we can index for created_at
+
+everytime we are using where clause or join condition freq we can create index for that column
+two things trigger indexes - join where sorting makes faster
+
+primary key will mostly be indexed in other table it should also be indexed
+
+thumb rule to create index is involved in join condition and where clause or sort operation and also frequency if that is worth it or not as it need to create lookup right 
+overhead of maintaining index
+
+instead of updating the updated_at time we can create triggers
+
+custom function and create triggers
+
+in trigger we need to provide name and also add the custom function like on which table should perform the action added in the custom function

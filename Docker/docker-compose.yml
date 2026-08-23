@@ -1,0 +1,26 @@
+services:
+  sqldb:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    container_name: "sqldb"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./servers.txt:/myapp/servers.txt
+
+    ports:
+      - "5432:5432"
+  nodejs:
+    build: .
+    container_name: "nodejs"
+    depends_on:
+      sqldb:
+        condition: service_healthy
+    ports:
+      - "3000:3000"

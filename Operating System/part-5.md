@@ -26,3 +26,12 @@ compiled code text
 
 each entry in process table
  PCB - process control block - id ,pc , state , priority - registers
+
+ process states:- life cycle
+
+ os converted to process - new to ready job queue (job scheduler) slow execution -> ready queue (cpu scheduler) very fast execution time 
+
+waiting queue - running to waiting
+ degree of multiprogramming managed by LTS 
+
+ dispatch - control given from OS of CPU to the process

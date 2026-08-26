@@ -21,3 +21,10 @@ to use these we need languages
 same language - SQL
 to specify schema - DDL - create table and constraints 
 to retrieve or manipulate data - DML - select and insert
+
+how app access DB?
+we use interface jdbc connectivity
+
+in js app will write sql with using interface (pg node js package ) connect with postgres db
+
+DBA - data and programs to access the data 

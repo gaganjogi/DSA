@@ -15,4 +15,17 @@ zombie process - child process terminated but parent not checked status
 
 repaing of zombie process - parent process should call wait system call to clean up the zombie process
 
-process entry will still be there if parent is not executed and child has finished parent should check the status of child to remove from process table
+process entry will still be there if parent is not executed and child has finished parent should check the status of child to remove from process 
+
+moving process from ready to the cpu this is where dispatcher comes and process scheduling algorithm 
+
+non primitive - no time quantum 
+primitive - time quantum 
+
+goals
+max cpu utilization
+min 
+
+get understanding for all times
+
+first come first serve

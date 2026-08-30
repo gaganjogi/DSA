@@ -17,3 +17,8 @@ CREATE TABLE positions (
     { "title": "CEO", "org_id": 3 }
   ]
 } document reference
+
+
+What is the best rule of thumb for deciding whether to embed nested data (as JSON) versus normalizing it into its own table with a foreign key?
+
+Embed it if it has no independent identity and won't be referenced elsewhere; normalize it if other records need to reference the same entity

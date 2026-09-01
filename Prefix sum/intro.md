@@ -41,3 +41,15 @@ and then set to the map
 
 if not set the key with prefix_sum and increment count of that
 
+arr=[1,2,3,4,5]
+if u want sum from index(2,3) then do prefix_sum[3] - prefix_sum[1] why because
+prefix_sum[3] = 1+2+3+4 = 10
+prefix_sum[1] = 1+2 = 3
+so 10-3 = 7 which is 3+4 = 7
+3 is having from 0,1,2,3
+1 is having from 0,1 
+remaining (2,3)
+so 3-1 = 2 which is 2,3
+
+
+

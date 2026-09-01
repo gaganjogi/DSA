@@ -1,0 +1,2 @@
+hi how are you?
+echo "i am fucking good"

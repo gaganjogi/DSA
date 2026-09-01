@@ -29,5 +29,4 @@ soa - start of authority - primary dns server for domain
 srv - service record - specific port service like ldap
 ptr - pointer record - reverse dns lookup instead of our domain to confuse send other dns name
 
-
 after setting up new instance new ip address will get updated in zone file(list of ip address) connected with some name server

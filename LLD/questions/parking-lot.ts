@@ -48,7 +48,7 @@ class Ticket {
     public entryTime: Date,
     public exitTime: Date | null = null
   ) {
-    this.ticketId = generateUUID();
+    this.ticketId = crypto.randomUUID();
   }
 
   calculateFee(): number {
@@ -103,16 +103,10 @@ class ParkingLot {
   }
 
   unparkVehicle(ticket: Ticket): number {
+    if (ticket.exitTime) throw new Error("Ticket already closed");
     ticket.exitTime = new Date();
     const fee = ticket.calculateFee();
     ticket.spot.vacate();
     return fee;
   }
 }
-
-// In the Logistics example, RoadLogistics.createTransport() was also just creating an object — return new Truck(). That's not fundamentally different from return new Vehicle(plate, type).
-
-// The actual distinguishing factor is this: in Logistics, Truck and Ship were two separate classes, each with their own deliver() method containing different code. In your Vehicle case, there's only one class, and type is just a field — a piece of data stored inside that one class, not a different class with different behavior.
-
-// Logistics: Truck.deliver() prints "road", Ship.deliver() prints "sea" — different code, different classes → Factory Method makes sense.
-// Vehicle: car.type is "CAR", truck.type is "TRUCK" — same code, same class, just a different value stored → Factory Method is unnecessary; a constructor argument is all you need.

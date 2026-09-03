@@ -89,7 +89,8 @@ Exactly — that's the rule. In the constructor (and fields, method parameters, 
 wherever a class depends on another object (constructor params, fields, method params), type that dependency as the interface. The concrete class should only ever appear at the single point where the object is actually constructed (new ElectricEngine()), never in the type declarations that describe the dependency.
 
 -----------------------------------------------------------------------------------------------------------------------------
-
+  One-line rule: describe what a thing can do (Engine), not what it is (ElectricEngine) — except at the exact spot you build it.
+  
 how to create a workable framework using inheritance,abstract classes, interfaces and composition.
 
 Although many systems must deal with legacy issues, fortunately for us, the pizza and donut applications are brand-new

@@ -103,3 +103,7 @@ Step 6: Delivery → DeliveryPerson : "assign delivery"
 Step 7: DeliveryPerson → Customer : "deliver to address"
 
 A responsibility can involve using another class's data — as long as the action itself (searching, deciding, looping through something) is being done by this class, on its own array. A collaboration is when this class has to send a message and rely on a different class's own logic/decision to get something done.
+
+
+  A quick sanity test per step: if you can answer "how does it do that?" by pointing at that class's own field or a loop over its own array, it's internal (responsibility). If
+  answering requires describing another class's behavior, you've correctly identified a collaboration and the arrow belongs there, not as a responsibility on the current card.

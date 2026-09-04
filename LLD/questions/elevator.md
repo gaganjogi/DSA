@@ -54,9 +54,9 @@ class CarButton{
 }
 
 class HallwayButton{
-  constructor(private elevator:ElevatorManager,private floor:number,private direction:'UP' | 'DOWN'){}
+  constructor(private elevatorController:ElevatorManager,private floor:number,private direction:'UP' | 'DOWN'){}
   press():void{
-      this.elevator.dispatch(this.floor)
+      this.elevatorController.dispatch(this.floor)
   }
 }
 

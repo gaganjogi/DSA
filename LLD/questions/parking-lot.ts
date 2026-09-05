@@ -259,7 +259,7 @@ class ParkingLot{
 
     unParkVehicle(ticket:Ticket){
       let vacate_spot=ticket.getSpot()
-      vacate_spot.setSpotStatus(true)
+      vacate_spot.unpark()
       ticket.closeTicket()
      return ticket.calculateFee()
     }

@@ -110,3 +110,157 @@ class ParkingLot {
     return fee;
   }
 }
+
+class Vehicle{
+  constructor(private vehicle_number:number,private type:'MOTORCYCLE'| 'CAR'| 'TRUCK'){}
+
+getVehicleNumber():number{
+  return this.vehicle_number
+  }
+
+  getVehicleType(){
+   return this.type
+  }  
+
+}
+
+
+class Spot{
+
+  private vehicle:Vehicle | null
+  constructor(private isAvailable:boolean,private size:'SMALL' | 'MEDIUM' | 'LARGE',private spot_id:number){
+    this.vehicle=null
+  }
+
+  getSpotStatus():boolean{
+    return this.isAvailable
+  }
+  
+  getSpotSize(){
+    return this.size
+  }
+
+  setSpotStatus(status:boolean):void{
+    this.isAvailable=status
+  }
+
+  parkVehicle(vehicle:Vehicle):void{
+    this.vehicle= vehicle
+    this.setSpotStatus(false)
+  }
+
+  unpark():void{
+    this.vehicle=null
+    this.setSpotStatus(true)
+  }
+
+  getVehicle():Vehicle | null{
+  return this.vehicle
+
+  }
+ canFit(type:'MOTORCYCLE' | 'CAR'|'TRUCK'):boolean{
+   if(type === 'MOTORCYCLE'){
+    return this.size==='SMALL' || this.size ==='MEDIUM' || this.size==='LARGE'
+   }
+   else if(type ==='CAR'){
+    return this.size ==='MEDIUM' || this.size==='LARGE'
+   }
+   else
+   {
+    return this.size==='LARGE'
+   }
+ }
+
+
+}
+
+
+class Floor{
+  constructor(private floor_id:number,private spots:Spot[]){ }
+
+   findAvailableSpot(vehicle:Vehicle):Spot | null{
+    for(let spot of this.spots){
+      let fit=spot.canFit(vehicle.getVehicleType())
+        if(spot.getSpotStatus() && fit){
+          return spot
+        }
+    }
+    return null
+  }
+
+  getFloorId(){
+    return this.floor_id
+  }
+  getSpots(){
+    return this.spots
+  }
+}
+
+class Ticket{
+   private static nextId: number = 1
+  private ticket_id:number
+  private exitTime:Date | null
+  constructor(private vehicle:Vehicle,private spot:Spot,private entryTime:Date){
+    this.ticket_id=Ticket.nextId
+    Ticket.nextId+=1
+    this.exitTime=null
+  }
+
+  getTicketId(){
+    return this.ticket_id
+  }
+  getEntryTime(){
+    return this.entryTime
+  }
+  getVehicle(){
+    return this.vehicle
+  }
+  getExitTime(){
+    return this.exitTime
+  }
+
+  getSpot(){
+    return this.spot
+  }
+
+  closeTicket():Date{
+    return this.exitTime=new Date()
+  }
+  calculateFee():number{
+    if(this.exitTime===null){
+      return 0
+    }
+   let time= Math.abs(this.exitTime.getTime()-this.entryTime.getTime())/(1000*60*60)
+   return time*10
+  }
+
+}
+class ParkingLot{
+  constructor(private floors:Floor[]){}
+
+  getFloors(){
+    return this.floors
+  }
+  
+  findAvailableSpot(vehicle:Vehicle): Spot| null{
+    for(let floor of this.floors){
+      let spot=floor.findAvailableSpot(vehicle)
+        if(spot) return spot
+      }
+     return null
+    }
+
+    parkVehicle(vehicle:Vehicle):Ticket | null{
+      let spot=this.findAvailableSpot(vehicle)
+      if(!spot) return null
+      spot.parkVehicle(vehicle)
+      return new Ticket(vehicle,spot,new Date())
+    }
+
+    unParkVehicle(ticket:Ticket){
+      let vacate_spot=ticket.getSpot()
+      vacate_spot.setSpotStatus(true)
+      ticket.closeTicket()
+     return ticket.calculateFee()
+    }
+  }

@@ -1,3 +1,4 @@
+behavioral pattern
 interesting state is subject as it will notify events so it is called publisher and one objects that listen to these objects are called subscribers 
 
 manily in publisher class we will be having list of subscribers and a way to add or remove subscriber

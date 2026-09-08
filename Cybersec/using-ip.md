@@ -1,0 +1,1 @@
+We need to get the IP address of the user and also the open ports and then services http managed by apache 2 (version) and also the OS

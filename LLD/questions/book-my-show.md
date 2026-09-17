@@ -30,6 +30,7 @@ return this.id
         getCategory(){
             return this.category
         }
+        
 }
 class MovieScreen{
     constructor(private id:number,private seats:Seat[]){}
@@ -60,16 +61,26 @@ return this.start_time
     getBookedSeats():Seat[]{
         return this.booked_seats
     }
-    addBookedSeat(seat:Seat){
-        this.booked_seats.push(seat)
+
+    isSeatAvailable(seat:Seat){
+     for(let booked_seat of this.booked_seats){
+        if(booked_seat.getSeatId()===seat.getSeatId()) return false
+     }
+     return true
     }
-    isSeatAvailable(seat:Seat):boolean{
-        for (let booked_seat of this.booked_seats)
-        {
-            if(seat.getSeatId()===booked_seat.getSeatId()) return false
+    
+    bookSeat(seats:Seat[]):boolean{
+        for(let seat of seats){
+            if(!this.isSeatAvailable(seat)) return false
         }
+
+        for(let seat of seats){
+            this.booked_seats.push(seat)
+        }
+
         return true
     }
+    
 }
 class Theatre{
     private screens:MovieScreen[]
@@ -143,18 +154,10 @@ result.push(show)
     }
 
     bookSeats(show:Show,seats:Seat[]):boolean{
-       
-       for(let seat of seats){
-             if(!show.isSeatAvailable(seat)){
-                return false
-             }
-       }
-
-       for(let seat of seats){
-show.addBookedSeat(seat)
-       }
-       return true
+       return show.bookSeat(seats)
     }
+
+
 
 
 }

@@ -125,6 +125,45 @@ class City{
 
 
 }
+
+class Customer{
+    constructor(private name:string,private id:number){}
+    getName():string{
+        return this.name
+    }
+    getId():number{
+        return this.id
+    }
+}
+
+class Booking{
+   private static  next_id=0
+   private id:number
+    constructor(private customer:Customer,private show:Show,private seats:Seat[]){
+        this.id=Booking.next_id
+        Booking.next_id+=1
+    }
+
+    calculateTotal():number{
+        let total=0
+        for(let seat of this.seats){
+            total+=seat.getSeatPrice()
+        }
+return total
+    }
+    getCustomer(){
+        return this.customer
+    }
+    getShow(){
+        return this.show
+    }
+    getBookingId(){
+        return this.id
+    }
+    getSeats(){
+        return this.seats
+    }
+}
 class BookingSystem{
     private cities:City[]
     constructor(){
@@ -153,14 +192,14 @@ result.push(show)
 
     }
 
-    bookSeats(show:Show,seats:Seat[]):boolean{
-       return show.bookSeat(seats)
+    bookSeats(customer:Customer,show:Show,seats:Seat[]):Booking | null{
+        if(!show.bookSeat(seats)) return null
+
+        let booking_details=new Booking(customer,show,seats)
+        return booking_details
     }
-
-
-
-
 }
+
 
 
 In your class design, show that you understand where the atomicity boundary needs to be — e.g., Show.bookSeat(seat) should be the one, single, indivisible operation that both checks-and-marks-booked, rather than two separate steps (isSeatAvailable() then addBookedSeat()) called separately by the caller with a gap in between.

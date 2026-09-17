@@ -158,3 +158,8 @@ show.addBookedSeat(seat)
 
 
 }
+
+
+In your class design, show that you understand where the atomicity boundary needs to be — e.g., Show.bookSeat(seat) should be the one, single, indivisible operation that both checks-and-marks-booked, rather than two separate steps (isSeatAvailable() then addBookedSeat()) called separately by the caller with a gap in between.
+
+Verbally/in comments, explain that in a real deployment, this method's actual implementation would delegate to an atomic database operation, and that the in-memory TypeScript version here is a simplified stand-in for that guarantee.

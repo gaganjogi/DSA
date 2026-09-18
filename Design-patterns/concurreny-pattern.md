@@ -51,3 +51,16 @@ read commited - for read shared lock released once read is done  for write exclu
 Why it's called "Serializable": the end result is as if T1 and T2 ran one completely after the other (serially) — never interleaved — even though they may have executed concurrently under the hood. That's the strongest guarantee among all isolation levels, and it's also why it's the slowest — real-world databases rarely default to it because range locks cause heavy contention when many transactions touch overlapping ranges.
 
 "We didn't rely on DB transactions for the overall proctoring workflow because it spanned multiple systems — Postgres, Kafka, S3, external LMS calls — over a duration far longer than a DB transaction can safely hold locks for. Temporal gave us durable execution instead: each step committed independently, workflow state was persisted so crashes were recoverable without data loss, and where cross-system consistency mattered we used compensating actions rather than atomic rollback — essentially a Saga pattern, orchestrated by Temporal instead of hand-rolled event choreography."
+
+first two optimistic concurreny level
+
+ocl - will controls it by versioning like version it the data in changes next it will increment and in next transaction it will get rollback to recent version (READ COMMITTED) provides high level concurreny and not sudden
+
+when changes we need to rollback and retry no deadloack high concurrency
+next two pessimistic concurreny level 
+
+deadlock in pcl
+for T1 - read A write B
+for T2 - read B write A
+ long running transaction
+aborted and started again

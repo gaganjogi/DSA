@@ -24,4 +24,15 @@ system like you need to to behave like this
 response:- choices - main answer (array of answers)
 usage - tokens used
 
-now 
+now first import os
+and next path lib for env and then get the api key and create client
+and then model role and then prompt 
+and message dict{role and content}
+and then next array of messages put that to message
+
+response=client.chat.completions.create(
+    model=model,
+    messages=messages
+)
+
+not prompt it is content

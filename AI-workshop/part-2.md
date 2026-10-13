@@ -23,3 +23,5 @@ system like you need to to behave like this
 
 response:- choices - main answer (array of answers)
 usage - tokens used
+
+now 

@@ -36,3 +36,6 @@ response=client.chat.completions.create(
 )
 
 not prompt it is content
+
+
+kjbnwjkdnjknajsddans

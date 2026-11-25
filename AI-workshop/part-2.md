@@ -14,7 +14,7 @@ how we get the output
 api key - client key
 model - model name
 messages - messages
-
+ 
 in messages we have role and content
 role - user , assisstant and system
 
